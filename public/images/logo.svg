@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="58" fill="#1a5c2e" opacity="0.08"/>
+
+  <!-- Main paddy leaf -->
+  <path d="M60 95 C60 95 25 70 25 45 C25 25 45 15 60 20 C75 15 95 25 95 45 C95 70 60 95 60 95Z"
+        fill="#2d8a4e" opacity="0.9"/>
+
+  <!-- Leaf vein center -->
+  <line x1="60" y1="90" x2="60" y2="22"
+        stroke="#fff" stroke-width="2" opacity="0.6"/>
+
+  <!-- Leaf veins left -->
+  <line x1="60" y1="75" x2="38" y2="60" stroke="#fff" stroke-width="1.2" opacity="0.5"/>
+  <line x1="60" y1="62" x2="35" y2="50" stroke="#fff" stroke-width="1.2" opacity="0.5"/>
+  <line x1="60" y1="50" x2="37" y2="40" stroke="#fff" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Leaf veins right -->
+  <line x1="60" y1="75" x2="82" y2="60" stroke="#fff" stroke-width="1.2" opacity="0.5"/>
+  <line x1="60" y1="62" x2="85" y2="50" stroke="#fff" stroke-width="1.2" opacity="0.5"/>
+  <line x1="60" y1="50" x2="83" y2="40" stroke="#fff" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Rice grains on stem -->
+  <ellipse cx="60" cy="28" rx="4" ry="6" fill="#6fdc9e" opacity="0.9"/>
+  <ellipse cx="52" cy="32" rx="3.5" ry="5.5" fill="#6fdc9e" opacity="0.8"/>
+  <ellipse cx="68" cy="32" rx="3.5" ry="5.5" fill="#6fdc9e" opacity="0.8"/>
+  <ellipse cx="45" cy="38" rx="3" ry="5" fill="#6fdc9e" opacity="0.7"/>
+  <ellipse cx="75" cy="38" rx="3" ry="5" fill="#6fdc9e" opacity="0.7"/>
+</svg>
