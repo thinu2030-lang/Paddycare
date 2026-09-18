@@ -1,58 +1,144 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌾 PaddyCare — Paddy Disease Identification Web Application
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+PaddyCare is a smart agricultural web application developed to help paddy farmers identify rice leaf diseases and access useful cultivation support.
 
-## About Laravel
+The system uses **Machine Learning-based image classification** to analyze uploaded paddy leaf images and provide a predicted disease with a confidence score. It also provides treatment recommendations, seed variety information, crop tracking, and communication with field officers.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Main Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* 🌿 **Paddy Disease Detection** — Upload a paddy leaf image and identify the predicted disease.
+* 🤖 **Machine Learning** — Uses a trained deep learning model for disease classification.
+* 💊 **Treatment Recommendations** — Provides chemical, organic, and integrated pest management recommendations.
+* 🌱 **Seed Guide** — Provides paddy variety information based on district and cultivation season.
+* 📅 **Field Officer Appointments** — Farmers can book appointments with field officers.
+* 👨‍🌾 **Farmer Dashboard** — Manage diagnoses, appointments, crop activities, and notifications.
+* 👨‍💼 **Field Officer Dashboard** — Review farmer diagnoses, provide advice, manage appointments, and publish articles.
+* 📝 **Agricultural Articles** — Farmers can access useful paddy cultivation information.
+* 🌾 **Harvest Tracker** — Track important cultivation activities from sowing to harvesting.
+* 📧 **Notifications & Emails** — Send notifications and district-based farmer communications.
+* 🔐 **Role-Based Access Control** — Separate access for Farmers, Field Officers, and Administrators.
+* 📊 **Admin Management & Reports** — Manage users, diseases, articles, and system reports.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Technologies Used
 
-## Learning Laravel
+### Web Application
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* PHP 8.3
+* Laravel 11
+* MySQL 8.0
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
+* Blade Templates
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Machine Learning
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+* Python
+* Flask
+* TensorFlow / Keras
+* MobileNetV2
+* Transfer Learning
+* Paddy Disease Image Dataset
 
-## Agentic Development
+### Development Tools
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+* Laragon
+* Visual Studio Code
+* Git & GitHub
+* Google Colab
 
-```bash
-composer require laravel/boost --dev
+## 🤖 Machine Learning
 
-php artisan boost:install
+PaddyCare includes a Machine Learning component for paddy leaf disease identification.
+
+The workflow is:
+
+**Paddy Leaf Image → Image Processing → Trained ML Model → Disease Prediction → Confidence Score → Treatment Recommendation**
+
+The model was developed using **MobileNetV2 transfer learning** with a paddy disease image dataset.
+
+## 👥 User Roles
+
+### 👨‍🌾 Farmer
+
+* Register and log in
+* Upload paddy leaf images
+* View disease predictions
+* View treatment recommendations
+* View seed varieties
+* Track cultivation activities
+* Book field officer appointments
+* Read agricultural articles
+
+### 👨‍💼 Field Officer
+
+* Manage appointments
+* Review farmer diagnoses
+* Provide expert advice
+* Manage agricultural articles
+* Send notifications to farmers
+
+### 👨‍💻 Administrator
+
+* Manage users
+* Manage diseases
+* Manage articles
+* Manage field officers
+* View system reports
+
+## 🏗️ System Architecture
+
+PaddyCare uses a web application architecture where the Laravel application communicates with a separate Python Flask Machine Learning service.
+
+```text
+Farmer
+   ↓
+Laravel Web Application
+   ↓
+Image Upload
+   ↓
+Python Flask ML Service
+   ↓
+Trained TensorFlow/Keras Model
+   ↓
+Disease Prediction + Confidence
+   ↓
+Laravel Application
+   ↓
+Treatment Recommendation
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## 📂 Project Structure
 
-## Contributing
+```text
+PaddyCare/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+├── composer.json
+├── package.json
+└── README.md
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🎯 Project Objective
 
-## Code of Conduct
+The main objective of PaddyCare is to provide farmers with an accessible digital platform for paddy disease identification and cultivation support, while improving access to agricultural information and field officer assistance.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📌 Project Type
 
-## Security Vulnerabilities
+**Academic / Final Year Project**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Developed as part of the **Higher National Diploma in Information Technology (HND IT)**.
 
-## License
+## 👩‍💻 Developer
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**B.M.T.Y. Chandrarathna**
+
+GitHub: [@thinu2030-lang](https://github.com/thinu2030-lang)
