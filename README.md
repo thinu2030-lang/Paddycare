@@ -126,7 +126,22 @@ PaddyCare/
 ├── package.json
 └── README.md
 ```
+## 📸 Screenshots
 
+### 👨‍🌾 Farmer Dashboard
+![Farmer Dashboard](farmer-dashboard.png)
+
+### 👮 Field Officer Dashboard
+![Field Officer Dashboard](field-officer-dashboard.png)
+
+### 👨‍💼 Admin Dashboard
+![Admin Dashboard](admin-dashboard.png.png)
+
+### 🤖 Disease Detection
+![Disease Detection](disease-detection.png)
+
+### 📅 Appointment Booking
+![Appointment Booking](appointment.png)
 ## 🎯 Project Objective
 
 The main objective of PaddyCare is to provide farmers with an accessible digital platform for paddy disease identification and cultivation support, while improving access to agricultural information and field officer assistance.
